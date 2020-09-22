@@ -28,7 +28,7 @@ NotFound
 n=input()
 m=input()
 i = iter(n)
-if (all(any(c==ch for c in i) for ch in m)):
+if (all(any(x==y for x in i) for y in m)):
     print("Found")
 else:
     print("NotFound")

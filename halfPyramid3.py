@@ -9,3 +9,11 @@ for i in range(n):
             print(c,end='')
             c+=2
     print()
+'''
+5
+1
+24
+135
+2468
+13579
+'''

@@ -52,36 +52,25 @@ Sample Output
 ---------.|..|..|.---------
 ------------.|.------------
 '''
-n,m=map(int,input().split())
-for i in range(n//2):
+def doorMat(n):
     l=[]
-    for j in range(m//2-2*i-1,i,-1):
+    for _ in range(m//2-2*i-1,i,-1):
         print('-',end='')
         l.append('-')
     print('.|',end='')
-    for j in range(i):
+    for _ in range(i):
         if i>0:
             print('..|',end='')
-    for j in range(i,0,-1):
+    for _ in range(i,0,-1):
         if i>0:
             print('..|',end='')
     print('.',end='')
     print(*l,end='',sep='')
     print()
+n,m=map(int,input().split())
+for i in range(n//2):
+    doorMat(i)
 t=(m-7)//2
 print('-'*t,'WELCOME','-'*t,sep='')
 for i in range(n//2-1,-1,-1):
-    l=[]
-    for j in range(m//2-2*i-1,i,-1):
-        print('-',end='')
-        l.append('-')
-    print('.|',end='')
-    for j in range(i):
-        if i>0:
-            print('..|',end='')
-    for j in range(i,0,-1):
-        if i>0:
-            print('..|',end='')
-    print('.',end='')
-    print(*l,end='',sep='')
-    print()
+    doorMat(i)

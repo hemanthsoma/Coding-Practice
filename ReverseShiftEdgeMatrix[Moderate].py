@@ -1,7 +1,7 @@
-a,b=list(map(int,input().split()))
+a,b=map(int,input().split())
 l=[]
-for i in range(a):
-    l.append(list(map(str,input().strip().split())))
+for _ in range(a):
+    l.append(input().split())
 for i in range(a):
     for j in range(b):
         if i==0 and j==0:

@@ -20,9 +20,10 @@ def longestPalindrome(s):
             end=len(s)-1
         else:
             end-=1
-            if end==0:
+            if end==start:
                 start+=1
                 end=len(s)-1
+    r=[i for i in s]
     return max(r,key=len)
 s=input()
 print(longestPalindrome(s))
